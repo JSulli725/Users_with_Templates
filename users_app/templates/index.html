@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'indexCSS.css' %}">
+</head>
+<body>
+    <h1>All the Users</h1>
+    <div class = "userId">
+        <h4>ID</h4>
+        <ul>
+            {% for user in allUsers %}
+                <li>{{ user.id }}</li>
+            {% endfor %}
+            </ul>
+    </div>
+    <div class = "userName">
+        <h4>Name</h4>
+        <ul>
+            {% for user in allUsers %}
+                <li>{{ user.first_name }} {{ user.last_name }}</li>
+            {% endfor %}
+            </ul>
+    </div>
+    <div class = "userEmail">
+        <h4>Email</h4>
+        <ul>
+            {% for user in allUsers %}
+                <li>{{ user.email_address }}</li>
+            {% endfor %}
+            </ul>
+    </div>
+    <div class = "userAge">
+        <h4>Age</h4>
+        <ul>
+            {% for user in allUsers %}
+                <li>{{ user.age }}</li>
+            {% endfor %}
+            </ul>
+    </div>
+    <h1>Add a User</h1>
+    <div class="addUserContainer">
+        <form action="/formAddUser" method="post">
+        {% csrf_token %}
+        First Name: <input name="first_name" type="text" class ="input_first_name">
+        Last Name: <input name="last_name" type="text" class ="input_last_name">
+        <br>
+        <p>Email:</p> <input name="email_address" type="text" class ="input_email">
+        Age: <input name="age" type="int" class ="input_age">
+        <button type="submit">Add</button>
+        </form>
+    </div>
+</body>
+</html>

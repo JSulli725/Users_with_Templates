@@ -1,0 +1,60 @@
+h1 {
+    margin-left: 250px;
+}
+
+.userId {
+    display: inline-block;
+    margin-left: 100px;
+}
+
+.userId h4 {
+    margin-left: 30px;
+}
+
+.userName {
+    display: inline-block;
+}
+
+.userName h4 {
+    margin-left: 65px;
+}
+
+.userEmail {
+    display: inline-block;
+}
+
+h4 {
+    margin-left: 80px;
+}
+
+.userAge {
+    display: inline-block;
+}
+
+.userAge h4 {
+    margin-left: 30px;
+}
+
+.addUserContainer {
+    margin-left: 65px;
+}
+
+.input_email, p{
+    display: inline-block;
+}
+
+.input_email {
+    display: inline-block;
+    margin-left: 33px;
+}
+
+.input_age {
+    margin-left: 45px;
+}
+
+button {
+    display: block;
+    margin-left: 250px;
+}
+
+
